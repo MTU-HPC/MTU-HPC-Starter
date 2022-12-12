@@ -136,4 +136,32 @@ When you are finished, or you wish to use a different conda environment you can 
 
     conda deactivate
 
+# Using Easy Build to run HPC Software
+
+## Install easybuild
+pip install --user easybuild
+eb --avail-modules-tools
+
+## Install a tool, e.g. prokka
+
+    # Dry run
+    eb --modules-tool EnvironmentModules --module-syntax Tcl prokka-1.14.5-gompi-2021a.eb -D
+    #Automatic installation
+    eb --modules-tool EnvironmentModules --module-syntax Tcl prokka-1.14.5-gompi-2021a.eb --robot
+
+## Load easybuild
+
+    module use /home/<username>/.local/easybuild/modules/all/
+
+## Inspect, load and unload the tool
+    
+    module avail
+    module load prokka/1.14.5-gompi-2021a
+    module unload prokka/1.14.5-gompi-2021a
+
+#Purge all modules
+    
+    module purge
+
+
 
