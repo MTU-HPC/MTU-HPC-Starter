@@ -159,7 +159,7 @@ eb --avail-modules-tools
     module load prokka/1.14.5-gompi-2021a
     module unload prokka/1.14.5-gompi-2021a
 
-#Purge all modules
+## Purge all modules
     
     module purge
 
